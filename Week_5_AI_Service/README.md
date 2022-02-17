@@ -1,7 +1,12 @@
+* ```python3 -m venv venv-name``` : 이름을 'venv-name'으로 하는 python3 가상환경 만들기
+* ```source venv-name/bin/activate``` : 만든 가상환경 실행하기
+* ```deactivate``` : 가상환경 종료하기
+
 ## Docker
 * ```docker pull "이미지 이름 : 태그"``` : 필요한 이미지 다운
   * ex ) ```docker pull mysql:8``` : mysql 8 버전의 이미지를 다운
 * ```docker images``` : 다운받은 이미지 목록 확인
+* ```docker rmi "이미지 ID"``` : 이미지 삭제
 * ```docker run "이미지 이름 : 태그"``` : 이미지를 기반으로 컨테이너 생성
   * ex ) ```docker run --name mysql-tutorial -e MYSQL_ROOT_PASSWORD=1234 -d -p 3306:3306 mysql:8``` : 다운받은 MySQL 이미지 기반으로 Docker Container를 만들고 실행
     * ```--name mysql-tutorial``` : 컨테이너 이름, 지정하지 않으면 랜덤으로 생성
